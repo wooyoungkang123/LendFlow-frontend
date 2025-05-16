@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LendFlow Test Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    h1 {
+      color: #1a90ff;
+    }
+    .info {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>LendFlow Test Page</h1>
+  <div class="info">
+    <p>If you can see this page, GitHub Pages is working correctly for static content.</p>
+    <p>This suggests that the issue with the blank page is related to:</p>
+    <ul>
+      <li>React router configuration (base path issues)</li>
+      <li>Blockchain connection errors</li>
+      <li>Missing environment variables</li>
+    </ul>
+    <p>Check the browser console on the main app for specific error messages.</p>
+  </div>
+  <div class="info">
+    <h2>Connection Test</h2>
+    <div id="status">Checking connection to Ethereum network...</div>
+    <script>
+      // Simple script to check if window.ethereum is available
+      const statusElement = document.getElementById('status');
+      
+      if (window.ethereum) {
+        statusElement.innerHTML = "✅ Ethereum provider detected (window.ethereum exists)";
+      } else {
+        statusElement.innerHTML = "❌ No Ethereum provider found. This is expected on GitHub Pages.";
+      }
+      
+      // Add some basic client-side info
+      const infoDiv = document.createElement('div');
+      infoDiv.innerHTML = `
+        <p><strong>Browser Information:</strong> ${navigator.userAgent}</p>
+        <p><strong>Base URL:</strong> ${window.location.href}</p>
+      `;
+      statusElement.appendChild(infoDiv);
+    </script>
+  </div>
+</body>
+</html> 

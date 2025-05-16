@@ -1,6 +1,63 @@
 # DeFi Lending Platform Frontend
 
-This is the frontend application for the DeFi Lending Platform project. It allows users to lend and borrow tokens using ETH as collateral.
+A decentralized finance lending platform that allows users to deposit collateral, borrow assets, and manage their loans.
+
+## Local Development
+
+1. Clone the repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Start the development server:
+   ```
+   npm run dev
+   ```
+4. Open your browser at http://localhost:5173
+
+## Running with Hardhat Local Node
+
+To connect to a local Hardhat blockchain:
+
+1. In a separate terminal, start the Hardhat node:
+   ```
+   cd .. && npm run dev
+   ```
+2. The frontend will automatically connect to the local node when running in development mode
+
+## Deploying to GitHub Pages
+
+### Automatic Deployment
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+When you push to the main branch, the workflow will build and deploy your app.
+
+### Manual Deployment
+
+To manually deploy to GitHub Pages:
+
+1. Build the project:
+   ```
+   npm run build
+   ```
+
+2. Deploy to GitHub Pages:
+   ```
+   npm run deploy
+   ```
+
+## Configuration
+
+- The app will automatically detect if it's running on GitHub Pages and use the Sepolia testnet
+- For local development, it connects to a local Hardhat node
+
+## Troubleshooting
+
+If you encounter a blank page on GitHub Pages:
+
+1. Check the browser console for errors
+2. Verify your wallet is connected to the Sepolia testnet
+3. Make sure the repository is properly configured for GitHub Pages (Settings > Pages)
 
 ## Project Structure
 
@@ -59,16 +116,3 @@ src/
 - RainbowKit
 - Ethers.js
 - Vite
-
-## Getting Started
-
-1. Clone the repository
-2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Run the development server:
-   ```
-   npm run dev
-   ```
-4. Open your browser at http://localhost:5173
