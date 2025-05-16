@@ -15,6 +15,7 @@ export function assetPath(path: string): string {
                         window.location.hostname !== '127.0.0.1';
   
   if (isGitHubPages) {
+    // Make sure this matches your GitHub repository name (case-sensitive)
     return `/LendFlow-frontend/${path}`;
   }
   
